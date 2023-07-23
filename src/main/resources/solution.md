@@ -1,6 +1,6 @@
-#List of potential Optimizations 
+## List of potential Optimizations 
 
-##getNumberOfActiveMembers
+### getNumberOfActiveMembers
 - Avoid using the unnecessary try-catch block for flow control.
 - Utilize the getMemberIfActive() method to check if each member is active, reducing unnecessary iterations.
 - Use int instead of long for the count since we only need to store a smaller value.
@@ -32,7 +32,7 @@ private int getNumberOfActiveMembers() {
 }
 ```
 
-##getMemberIfActive
+### getMemberIfActive
 - Avoid fetching all members from the database to find a single member by ID.
 - Use a more efficient query in memberRepository to directly fetch the member with the given ID and check their status.
 - Handle the case when the member with the specified ID is not found in the database more gracefully.
