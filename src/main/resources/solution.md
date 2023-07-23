@@ -49,7 +49,7 @@ private Member getMemberIfActive(long memberId) {
     }
 
     if (member.getStatus() != MemberStatus.ACTIVE) {
-        throw new RuntimeException("User is not active to proceed with lending.");
+        throw new RuntimeException("User is not active.");
     }
 
     return member;
