@@ -49,7 +49,7 @@ private Member getMemberIfActive(long memberId) {
     }
 
     if (member.getStatus() != MemberStatus.ACTIVE) {
-        throw new RuntimeException("User is not active.");
+        throw new RuntimeException("Member is not active.");
     }
 
     return member;
