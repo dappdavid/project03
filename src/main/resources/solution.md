@@ -1,4 +1,4 @@
-## List of potential Optimizations 
+## List of potential optimizations 
 
 ### getNumberOfActiveMembers
 - Avoid using the unnecessary try-catch block for flow control.
