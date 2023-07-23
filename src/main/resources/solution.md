@@ -4,7 +4,8 @@
 - Avoid using the unnecessary try-catch block for flow control.
 - Utilize the getMemberIfActive() method to check if each member is active, reducing unnecessary iterations.
 - Use int instead of long for the count since we only need to store a smaller value.
-- Remove the unnecessary variable Member m.
+- Remove the unnecessary call to getMemberIfActive as we already have the member object. We can check the status field.
+- Remove the unnecessary variable Member m and replace by if condition for member.getStatus().
 - Remove the unnecessary variable long activeMember.
 - Instead of incrementing activeMembersCount by 1 for each active member, do a post-increment of activeMembersCount
 ```
@@ -13,7 +14,7 @@ private int getNumberOfActiveMembers() {
     int activeMembersCount = 0;
 
     for (Member member : members) {
-        if (getMemberIfActive(member.getId())!=null) {
+        if (member.getStatus() == MemberStatus.ACTIVE) {
             activeMembersCount++;
         }
     }
