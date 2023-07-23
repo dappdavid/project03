@@ -17,9 +17,14 @@ public class LibraryService {
 
 	private final MemberRepository memberRepository;
 
-	//The purpose of this method is to return the total number of active members
-	//of the library.
-	// Review this method
+	// Purpose of this method: To return the total number of active members
+	// of the library.
+	//
+	// Question : Review this method and assess if any of the following is required:
+	// 1. Any wrong implementation that needs to be corrected?
+	// 2. Any performance related optimizations that can be done?
+	// 3. Any other change that can done so that the code is clean, concise, optimal and error free?
+	// Note: Make sure that the original purpose is still satisfied.
 	private long getNumberOfActiveMembers() {
 		List<Member> members = memberRepository.findAll();
 		long activeMembersCount = 0;
@@ -39,9 +44,14 @@ public class LibraryService {
 		return activeMembersCount;
 	}
 
-	//The purpose of this method is to find out if a given memberId belongs to
-	//an active member. If yes, return the Member object
-	// Review this method
+	// The purpose of this method : To find out if a given memberId belongs to
+	// an active member. If yes, then return the Member object.
+	//
+	// Question : Review this method and assess if any of the following is required:
+	// 1. Any wrong implementation that needs to be corrected?
+	// 2. Any performance related optimizations that can be done?
+	// 3. Any other change that can done so that the code is clean, concise, optimal and error free?
+	// Note: Make sure that the original purpose is still satisfied.
 	private Member getMemberIfActive(long memberId) {
 		List<Member> members = memberRepository.findAll();
 
