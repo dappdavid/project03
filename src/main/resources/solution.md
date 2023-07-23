@@ -2,7 +2,6 @@
 
 ### getNumberOfActiveMembers
 - Avoid using the unnecessary try-catch block for flow control.
-- Utilize the getMemberIfActive() method to check if each member is active, reducing unnecessary iterations.
 - Use int instead of long for the count since we only need to store a smaller value.
 - Remove the unnecessary call to getMemberIfActive as we already have the member object. We can check the status field.
 - Remove the unnecessary variable Member m and replace by if condition for member.getStatus().
